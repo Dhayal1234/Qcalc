@@ -16,7 +16,6 @@ public class StandardCalculatorTest {
 
 
 
-
     @Test
     @DisplayName("Test Addition of Two Integers")
     void testAdditionOperation(){
@@ -128,6 +127,29 @@ void testAdditionOverflowForDoubles(){
         public void execute() throws Throwable{
 
             standardCalculator.add(Double.MAX_VALUE, Double.MAX_VALUE);
+
+        }
+
+    });
+
+}
+
+
+@Test
+
+@DisplayName("Test Division Divide By Zero Scenario")
+
+void testDivisionDivideByZero(){
+
+    //Assert
+
+    Assertions.assertThrows(ArithmeticException.class,new Executable(){
+
+        @Override
+
+        public void execute() throws Throwable{
+
+            standardCalculator.divide(10,0);
 
         }
 
