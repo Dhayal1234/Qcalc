@@ -14,7 +14,7 @@ public class StandardCalculator {
     }
  
     
- 
+ //random comment
     public void setResult(int value) {
  
        this.result = value;
