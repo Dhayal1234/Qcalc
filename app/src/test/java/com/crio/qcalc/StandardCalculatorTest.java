@@ -145,6 +145,18 @@ void testAdditionOverflowForDoubles(){
             }
         });
     }
+ 
+    @Test
+    @DisplayName("Test Multiplication Overflow of One Positive and One Negative Double")
+    void testMultiplicationOverflowForPositiveAndNegativeDoubles() {
+        // Assert
+        Assertions.assertThrows(ArithmeticException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                standardCalculator.multiply(Double.MAX_VALUE, -2.0);
+            }
+        });
+    }   
 
 @Test
 
