@@ -84,6 +84,11 @@ public void subtract(double num1, double num2){
     public void multiply(double num1, double num2)
     {
         result = num1*num2 ;
+        if (Double.isInfinite(result) || result == Double.MAX_VALUE || result == -Double.MAX_VALUE) {
+            throw new ArithmeticException("Double overflow");
+        }
+
+        this.result = result;
     }
 
 
