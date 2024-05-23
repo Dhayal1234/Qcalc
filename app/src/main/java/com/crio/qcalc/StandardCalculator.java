@@ -88,7 +88,7 @@ public void subtract(double num1, double num2){
             throw new ArithmeticException("Double overflow");
         }
 
-        this.result = result;
+        
     }
 
 
