@@ -134,6 +134,17 @@ void testAdditionOverflowForDoubles(){
 
 }
 
+@Test
+    @DisplayName("Test Multiplication Overflow of Two Doubles")
+    void testMultiplicationOverflowForDoubles() {
+        // Assert
+        Assertions.assertThrows(ArithmeticException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                standardCalculator.multiply(Double.MAX_VALUE, 2.0);
+            }
+        });
+    }
 
 @Test
 
